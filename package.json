@@ -1,0 +1,47 @@
+{
+  "name": "expo-e2e-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "start:go": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "build:ios": "detox build -c ios.sim.debug",
+    "test:ios": "detox test -c ios.sim.debug",
+    "e2e:ios": "yarn build:ios && yarn test:ios",
+    "build:ios-release": "detox build -c ios.sim.release",
+    "test:ios-release": "detox test -c ios.sim.release",
+    "e2e:ios-release": "yarn build:ios-release && yarn test:ios-release",
+    "build:android": "detox build -c android.emu.debug",
+    "test:android": "detox test -c android.emu.debug",
+    "e2e:android": "yarn build:android && yarn test:android",
+    "build:android-release": "detox build -c android.emu.release",
+    "test:android-release": "detox test -c android.emu.release",
+    "e2e:android-release": "yarn build:android-release && yarn test:android-release"
+  },
+  "dependencies": {
+    "expo": "~44.0.0",
+    "expo-splash-screen": "~0.14.1",
+    "expo-status-bar": "~1.2.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3",
+    "react-native-web": "0.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@config-plugins/detox": "^1.1.0",
+    "@types/jest": "^27.4.0",
+    "@types/react": "~17.0.21",
+    "@types/react-native": "~0.64.12",
+    "@expo/xcpretty": "^4.1.0",
+    "detox": "^19.4.2",
+    "jest": "^27.4.7",
+    "jest-circus": "^27.4.6",
+    "ts-jest": "^27.1.3",
+    "typescript": "~4.3.5"
+  },
+  "private": true
+}

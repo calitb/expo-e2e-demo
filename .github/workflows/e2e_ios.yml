@@ -1,0 +1,35 @@
+name: E2E (iOS)
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    name: E2E (iOS)
+    runs-on: macOS-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Install Pod Dependencies
+        run: cd ./ios && pod install && cd ..
+
+      - name: Install Detox Dependencies
+        run: |
+          brew tap wix/brew
+          brew install applesimutils
+
+      - name: Build for e2e
+        run: yarn build:ios-release
+
+      - name: Run e2e
+        run: yarn test:ios-release
