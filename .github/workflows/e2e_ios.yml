@@ -33,3 +33,10 @@ jobs:
 
       - name: Run e2e
         run: yarn test:ios-release
+
+      - name: Store Detox artifacts on test failure
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: detox-artifacts
+          path: .artifacts
