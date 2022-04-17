@@ -47,7 +47,7 @@ jobs:
           arch: x86
           channel: canary
           profile: pixel
-          avd-name: Pixel_3a_API_30_AOSP
+          avd-name: Pixel_3a_API_30
           force-avd-creation: false
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: false
@@ -61,5 +61,5 @@ jobs:
           arch: x86
           channel: canary
           profile: pixel
-          avd-name: Pixel_3a_API_30_AOSP
+          avd-name: Pixel_3a_API_30
           script: yarn test:android-release
