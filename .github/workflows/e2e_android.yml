@@ -63,3 +63,10 @@ jobs:
           profile: pixel
           avd-name: Pixel_3a_API_30
           script: yarn test:android-release
+
+      - name: Store Detox artifacts on test failure
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: detox-artifacts
+          path: .artifacts
