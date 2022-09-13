@@ -22,26 +22,26 @@
     "e2e:android-release": "yarn build:android-release && yarn test:android-release"
   },
   "dependencies": {
-    "expo": "~44.0.0",
-    "expo-splash-screen": "~0.14.1",
-    "expo-status-bar": "~1.2.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-native": "0.64.3",
-    "react-native-web": "0.17.1"
+    "expo": "~46.0.9",
+    "expo-splash-screen": "~0.16.2",
+    "expo-status-bar": "~1.4.0",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-native": "0.69.5",
+    "react-native-web": "~0.18.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@config-plugins/detox": "^1.1.0",
-    "@types/jest": "^27.4.0",
-    "@types/react": "~17.0.21",
-    "@types/react-native": "~0.64.12",
+    "@babel/core": "^7.18.6",
+    "@config-plugins/detox": "^3.0.0",
     "@expo/xcpretty": "^4.1.0",
-    "detox": "^19.4.2",
-    "jest": "^27.4.7",
-    "jest-circus": "^27.4.6",
-    "ts-jest": "^27.1.3",
-    "typescript": "~4.3.5"
+    "@types/jest": "^28.1.6",
+    "@types/react": "~18.0.0",
+    "@types/react-native": "~0.69.1",
+    "detox": "^19.12.1",
+    "jest": "^28.1.3",
+    "jest-circus": "^28.1.3",
+    "ts-jest": "^28.0.7",
+    "typescript": "^4.6.3"
   },
   "private": true
 }
