@@ -6,8 +6,6 @@ on:
 
 jobs:
   EAS-E2E:
-    if: github.ref == 'refs/heads/main'
-    needs: Checks
     runs-on: ubuntu-latest
 
     steps:
