@@ -44,3 +44,14 @@ yarn e2e:ios
 ```
 
 Check the [wiki](https://github.com/calitb/ExpoE2EDemo/wiki/Setup-Github-Workflow-to-run-e2e-in-an-Expo-project-using-Detox) in this repo to see how to setup this in your project.
+
+
+## Running e2e using EAS (Expo Application Server)
+
+See the detailed guide [here](https://docs.expo.dev/build-reference/e2e-tests/).
+
+Run `yarn run eas-e2e` to build the app and run the tests.
+
+##### Notice the file `.github/workflows/deployment.yml` runs the e2e on each comnmit to the main branch. 
+Remember to create your EXPO_TOKEN [here](https://docs.expo.dev/accounts/programmatic-access), and add it to your repository following [this guide](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
+

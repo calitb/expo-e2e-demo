@@ -14,6 +14,11 @@ module.exports = {
     },
   },
   apps: {
+    ios: {
+      type: 'ios.app',
+      build: `xcodebuild -workspace ios/${iosName}.xcworkspace -scheme ${iosName} -configuration Release -sdk iphonesimulator -arch x86_64 -derivedDataPath ios/build`,
+      binaryPath: `ios/build/Build/Products/Release-iphonesimulator/${iosName}.app`,
+    },
     'ios.release': {
       type: 'ios.app',
       binaryPath: `${derivedDataPath}/Build/Products/Release-${sdk}/${iosName}.app`,
@@ -50,6 +55,10 @@ module.exports = {
     },
   },
   configurations: {
+    ios: {
+      device: 'simulator',
+      app: 'ios',
+    },
     'ios.sim.release': {
       device: 'simulator',
       app: 'ios.release',
