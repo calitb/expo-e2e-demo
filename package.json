@@ -19,7 +19,10 @@
     "e2e:android": "yarn build:android && yarn test:android",
     "build:android-release": "detox build -c android.emu.release",
     "test:android-release": "detox test -c android.emu.release",
-    "e2e:android-release": "yarn build:android-release && yarn test:android-release"
+    "e2e:android-release": "yarn build:android-release && yarn test:android-release",
+    "eas-build-pre-install": "./eas-hooks/eas-build-pre-install.sh",
+    "eas-build-on-success": "./eas-hooks/eas-build-on-success.sh",
+    "eas-e2e": "eas build -p ios --profile test"
   },
   "dependencies": {
     "expo": "~46.0.9",
